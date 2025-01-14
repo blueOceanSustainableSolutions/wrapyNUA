@@ -22,6 +22,10 @@ timeStepSizeMethod = -1
 # Reference solution. 1: Value of finest discretization, 2: Second finest, ...
 uncertaintySolution = 1
 
+# List of solutions to be ignored. 1-based index, sorted from finest to coarsest solution.
+# Use empty list [] to consider all solutions.
+ignoreSolutions = []
+
 # 0: Plots only value of reference solution, 1: Plots all
 showAllUncertainties = 1
 
@@ -33,18 +37,18 @@ serif = 0
 """
 Tutorial
 --------
-steady: isUnsteady = 0, gSSM = 1, tSSM = -1, uncertaintySolution = 1
-unsteady: isUnsteady = 1, gSSM = 2, tSSM = -1, uncertaintySolution = 1
+steady: isUnsteady = 0, gSSM = 1, tSSM = -1, uncertaintySolution = 1, ignoreSolutions = [5]
+unsteady: isUnsteady = 1, gSSM = 2, tSSM = -1, uncertaintySolution = 1, ignoreSolutions = [8]
 
 MARIN
 -----
-std-2d-structured_1: isUnsteady = 0, gSSM = 1, tSSM = -1, uncertaintySolution = 1
-std-3d-structured_1: isUnsteady = 0, gSSM = 3, tSSM = -1, uncertaintySolution = 1
-unstd-2d-structured_1: isUnsteady = 1, gSSM = 2, tSSM = 1, uncertaintySolution = 1
-unstd-2d-unstructured_1: isUnsteady = 1, gSSM = 2, tSSM = 1, uncertaintySolution = 1
-unstd-3d-unstructured_1: isUnsteady = 1, gSSM = -1, tSSM = -1, uncertaintySolution = 2
-unstd-3d-unstructured_2: isUnsteady = 1, gSSM = 3, tSSM = 1, uncertaintySolution = 1
-unstd-3d-unstructured_3: isUnsteady = 1, gSSM = 3, tSSM = 1, uncertaintySolution = 1
+std-2d-structured_1: isUnsteady = 0, gSSM = 1, tSSM = -1, uncertaintySolution = 1, ignoreSolutions = [7]
+std-3d-structured_1: isUnsteady = 0, gSSM = 3, tSSM = -1, uncertaintySolution = 1, ignoreSolutions = []
+unstd-2d-structured_1: isUnsteady = 1, gSSM = 2, tSSM = 1, uncertaintySolution = 1, ignoreSolutions = []
+unstd-2d-unstructured_1: isUnsteady = 1, gSSM = 2, tSSM = 1, uncertaintySolution = 1, ignoreSolutions = []
+unstd-3d-unstructured_1: isUnsteady = 1, gSSM = -1, tSSM = -1, uncertaintySolution = 2, ignoreSolutions = []
+unstd-3d-unstructured_2: isUnsteady = 1, gSSM = 3, tSSM = 1, uncertaintySolution = 1, ignoreSolutions = []
+unstd-3d-unstructured_3: isUnsteady = 1, gSSM = 3, tSSM = 1, uncertaintySolution = 1, ignoreSolutions = []
 """
 
 #%% Imports
@@ -125,7 +129,7 @@ def getData(path, dataFileName, isUnsteady, rMethod, tauMethod):
 
 
 def plotUncertainty_std(path, var, r_i, phi_i, uphi_i, p, alpha, phi_0, 
-                        iFitType, exp, uSol, showAll, serif):
+                        iFitType, exp, uSol, r_out, phi_out, showAll, serif):
     # Text style
     if serif == 1:
         plt.rc('font', family='Serif', size=16)
@@ -138,13 +142,14 @@ def plotUncertainty_std(path, var, r_i, phi_i, uphi_i, p, alpha, phi_0,
     var_an = ''.join(letter for letter in var if letter.isalnum())
     
     # Independent variable
-    r_lin = np.linspace(0, np.max(r_i), num=1000)
+    r_lin = np.linspace(0, np.max(np.concat((r_i, r_out))), num=1000)
     
     # Create figure
     fig, ax = plt.subplots(figsize=(8, 6), dpi=300, tight_layout=True)
     
     # Data points
     ax.plot(r_i, phi_i, 'ko', fillstyle='none')
+    ax.plot(r_out, phi_out, 'ko', fillstyle='none', alpha=0.5)
     # Error bars
     ax.errorbar(r_i, phi_i, uphi_i, color='black', fmt='none', capsize=5)
     # Error values as percentage
@@ -185,7 +190,7 @@ def plotUncertainty_std(path, var, r_i, phi_i, uphi_i, p, alpha, phi_0,
 
 
 def plotUncertainty_unstd(path, var, r_i, tau_i, phi_i, uphi_i, fp, iFitType, 
-                          exp, uSol, showAll, serif):
+                          exp, uSol, r_out, tau_out, phi_out, showAll, serif):
     # Text style
     if serif == 1:
         plt.rc('font', family='Serif', size=16)
@@ -198,8 +203,8 @@ def plotUncertainty_unstd(path, var, r_i, tau_i, phi_i, uphi_i, fp, iFitType,
     var_an = ''.join(letter for letter in var if letter.isalnum())
     
     # Independent variables
-    r_lin = np.linspace(0.5, np.max(r_i), num=1000)
-    tau_lin = np.linspace(0.5, np.max(tau_i), num=1000)
+    r_lin = np.linspace(0.5, np.max(np.concat((r_i, r_out))), num=1000)
+    tau_lin = np.linspace(0.5, np.max(np.concat((tau_i, tau_out))), num=1000)
     r_lin, tau_lin = np.meshgrid(r_lin, tau_lin)
     
     # Create figure
@@ -207,7 +212,8 @@ def plotUncertainty_unstd(path, var, r_i, tau_i, phi_i, uphi_i, fp, iFitType,
     ax = plt.axes(projection='3d')
     
     # Data points
-    ax.scatter(r_i, tau_i , phi_i, facecolors='none', edgecolors='k')
+    ax.scatter(r_i, tau_i, phi_i, facecolors='none', edgecolors='k')
+    ax.scatter(r_out, tau_out, phi_out, facecolors='none', edgecolors='k', alpha=0.5)
     # Error bars
     ax.errorbar(r_i, tau_i, phi_i, uphi_i, ecolor='black', fmt='none', capsize=5)
     # Error values as percentage
@@ -268,6 +274,9 @@ varNames, df_sim, df_exp = getData(path, dataFileName, isUnsteady,
 nua = NUA()
 print(f'Uncertainty tools version: {nua.toolversion()}\n')
 
+# Adapt ignored indices to be 0-based (Python standard)
+ignoreSolutions = np.array(ignoreSolutions) - 1
+
 for var in varNames:
     # Alphanumeric variable name
     var_an = ''.join(letter for letter in var if letter.isalnum())
@@ -285,9 +294,24 @@ for var in varNames:
     except:
         exp = 0
     
+    # Outliers to be ignored
+    if ignoreSolutions.size:
+        r_out = r_i[ignoreSolutions]
+        r_i = np.delete(r_i, ignoreSolutions)
+        phi_out = phi_i[ignoreSolutions]
+        phi_i = np.delete(phi_i, ignoreSolutions)
+    else:
+        r_out = []
+        phi_out = []
+
     if isUnsteady:
         # Relative time step size
         tau_i = df_sim['tau_i'].to_numpy()
+        if ignoreSolutions.size:
+            tau_out = tau_i[ignoreSolutions]
+            tau_i = np.delete(tau_i, ignoreSolutions)
+        else:
+            tau_out = []
         
         # Call unsteady uncertainty routine
         [uphi_i, fp, iFitType] = \
@@ -319,8 +343,8 @@ for var in varNames:
         
         # Uncertainty plot
         plotUncertainty_unstd(path, var, r_i, tau_i, phi_i, uphi_i, fp, 
-                              iFitType, exp, uncertaintySolution, 
-                              showAllUncertainties, serif)
+                              iFitType, exp, uncertaintySolution, r_out, 
+                              tau_out, phi_out, showAllUncertainties, serif)
     
     else:
         # Call steady uncertainty routine
@@ -340,6 +364,6 @@ for var in varNames:
         
         # Uncertainty plot
         plotUncertainty_std(path, var, r_i, phi_i, uphi_i, p, alpha, phi_0, 
-                            iFitType, exp, uncertaintySolution, 
+                            iFitType, exp, uncertaintySolution, r_out, phi_out, 
                             showAllUncertainties, serif)
 

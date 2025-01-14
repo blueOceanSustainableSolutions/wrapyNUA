@@ -65,9 +65,9 @@
  Fit p, weights from hi
   3.1157E-01  2.1507E-02  1.8933E+00  9.3000E-04
  Fit p, Huber weights
-  3.1037E-01  2.2628E-02  1.8527E+00  3.6726E-08
+  3.1037E-01  2.2628E-02  1.8527E+00  3.6333E-08
  Fit p, Bisquare weights
-  3.1037E-01  2.2628E-02  1.8527E+00  6.1493E-15
+  3.1037E-01  2.2628E-02  1.8527E+00  6.1647E-15
  p determined
  Weights Bisquare
  Guess of exact solution                    =  3.1037E-01
@@ -75,12 +75,12 @@
  Observed order of grid convergence       p =  1.9
  Factor of safety                           =  1.25
  Standard deviation of the fit (no weights) =  1.0538E-03
- Standard deviation of the fit (weighted)   =  6.1493E-15
+ Standard deviation of the fit (weighted)   =  6.1647E-15
  Ratio between Std/Data                     =  2.7990E-02
  Grid   1 dx=    1.00 phi=   3.330E-01
  Estimated uncertainty                      =  2.8327E-02
  Estimated error                            =  2.2628E-02
- Estimated error noise                      =  9.4245E-15
+ Estimated error noise                      =  9.4954E-15
 
  Grid   2 dx=    1.20 phi=   3.425E-01
  Estimated uncertainty                      =  4.0116E-02
@@ -95,10 +95,10 @@
  Grid   4 dx=    2.00 phi=   3.921E-01
  Estimated uncertainty                      =  1.0231E-01
  Estimated error                            =  8.1728E-02
- Estimated error noise                      =  1.1811E-14
+ Estimated error noise                      =  1.1771E-14
 
  Grid   5 dx=    3.00 phi=   4.836E-01
  Estimated uncertainty                      =  2.1685E-01
  Estimated error                            =  1.7323E-01
- Estimated error noise                      =  8.1477E-15
+ Estimated error noise                      =  8.2186E-15
 
