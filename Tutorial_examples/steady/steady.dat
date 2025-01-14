@@ -1,0 +1,13 @@
+# Steady example
+# First column must contain the grid step size. The name is irrelevant
+# Columns need to be separated by whitespace (space or tab)
+# Comments can be added leading by a #
+n_i	\phi_a		\phi_{exp}	# Variable names can be specified in LaTeX syntax
+0	0		3.118E-01	# Optional line with experimental measurements
+#10	1.874E-01	7.742E-01	# Solutions can be deactivated by commenting
+20	1.236E-01	4.836E-01	# Steady cases require at least 3 solutions
+30	1.121E-01	3.921E-01
+40	1.069E-01	3.569E-01
+50	1.045E-01	3.425E-01
+60	1.030E-01	3.330E-01
+# An experimental value of exactly 0 will be disregarded

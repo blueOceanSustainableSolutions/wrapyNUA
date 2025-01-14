@@ -1,0 +1,208 @@
+ Version 2023
+ New variable
+          dx          dt         psi
+  1.0000E+00  1.0000E+00  1.5030E+00
+  1.0000E+00  2.0000E+00  1.5070E+00
+  1.0000E+00  4.0000E+00  1.5210E+00
+  1.4215E+00  1.0000E+00  1.5090E+00
+  1.4215E+00  2.0000E+00  1.5120E+00
+  1.4215E+00  4.0000E+00  1.5260E+00
+  1.8708E+00  1.0000E+00  1.5170E+00
+  1.8708E+00  4.0000E+00  1.5430E+00
+ Largest  value :  1.5430E+00
+ Smallest value :  1.5030E+00
+ 
+ Fit px space and pt time, no weights
+  1.4975E+00  2.0802E-03  2.3022E-03  3.6130E+00  1.6487E+00  2.8529E-03
+ Fit px space and pt time, weights from hi ti
+  1.4979E+00  2.7049E-03  1.7590E-03  3.1454E+00  1.8097E+00  2.5879E-03
+ Fit px space and pt time, Huber weights
+ Impossible to obtain px for space and pt for time
+ Fit px space and pt time, Bisquare weights
+ Impossible to obtain px for space and pt for time
+ 
+ px space 1, fit pt time, no weights
+  1.4798E+00  1.9817E-02  1.4719E-03  1.0000E+00  1.9445E+00  3.3308E-03
+ px space 1, fit pt time, weights from hi and ti
+  1.4823E+00  1.8293E-02  1.2752E-03  1.0000E+00  2.0251E+00  2.8164E-03
+ px space 1, fit pt time, Huber weights
+  1.4854E+00  1.6234E-02  1.0068E-03  1.0000E+00  2.1316E+00  1.8697E-03
+ px space 1, fit pt time, Bisquare weights
+  1.4877E+00  1.4655E-02  8.9160E-04  1.0000E+00  2.1680E+00  8.4282E-04
+ 
+ px space 2, fit pt time, no weights
+  1.4924E+00  7.1073E-03  1.8395E-03  2.0000E+00  1.7957E+00  2.8105E-03
+ px space 2, fit pt time, weights from hi and ti
+  1.4939E+00  6.5834E-03  1.5279E-03  2.0000E+00  1.9036E+00  2.4131E-03
+ px space 2, fit pt time, Huber weights
+  1.4962E+00  5.6477E-03  1.1856E-03  2.0000E+00  2.0067E+00  1.0720E-03
+ px space 2, fit pt time, Bisquare weights
+  1.4968E+00  5.4139E-03  1.0995E-03  2.0000E+00  2.0367E+00  3.4516E-04
+ 
+ Fit px space, pt time 1, no weights
+  1.4924E+00  1.9279E-03  6.8675E-03  3.7702E+00  1.0000E+00  2.6890E-03
+ Fit px space, pt time 1, weights from hi and ti
+  1.4925E+00  2.4534E-03  6.6486E-03  3.3378E+00  1.0000E+00  2.5849E-03
+ Fit px space, pt time 1, Huber weights
+  1.4927E+00  1.9868E-03  6.6950E-03  3.6500E+00  1.0000E+00  2.4792E-03
+ Fit px space, pt time 1, Bisquare weights
+  1.4927E+00  3.7877E-03  5.9887E-03  2.5186E+00  1.0000E+00  1.3388E-03
+ 
+ Fit px space, pt time 2, no weights
+  1.4988E+00  2.1534E-03  1.3416E-03  3.5426E+00  2.0000E+00  2.5154E-03
+ Fit px space, pt time 2, weights from hi and ti
+  1.4985E+00  2.7581E-03  1.3192E-03  3.1074E+00  2.0000E+00  2.2551E-03
+ Fit px space, pt time 2, Huber weights
+  1.4982E+00  3.7344E-03  1.1951E-03  2.5117E+00  2.0000E+00  1.0816E-03
+ Fit px space, pt time 2, Bisquare weights
+ Impossible to obtain px for space with pt time 2
+ 
+ px space 1, pt time 1, no weights
+  1.4723E+00  2.0720E-02  6.9067E-03  1.0000E+00  1.0000E+00  3.2673E-03
+ px space 1, pt time 1, weights from hi and ti
+  1.4751E+00  1.9166E-02  6.6523E-03  1.0000E+00  1.0000E+00  2.8951E-03
+ px space 1, pt time 1, Huber weights
+  1.4772E+00  1.7947E-02  6.2701E-03  1.0000E+00  1.0000E+00  2.3623E-03
+ px space 1, pt time 1, Bisquare weights
+  1.4805E+00  1.6006E-02  5.7933E-03  1.0000E+00  1.0000E+00  1.3026E-03
+ 
+ px space 2, pt time 1, no weights
+  1.4860E+00  7.3959E-03  6.8880E-03  2.0000E+00  1.0000E+00  2.7654E-03
+ px space 2, pt time 1, weights from hi and ti
+  1.4876E+00  6.8763E-03  6.6523E-03  2.0000E+00  1.0000E+00  2.5089E-03
+ px space 2, pt time 1, Huber weights
+  1.4888E+00  6.4473E-03  6.3110E-03  2.0000E+00  1.0000E+00  2.0312E-03
+ px space 2, pt time 1, Bisquare weights
+  1.4919E+00  5.4932E-03  5.8248E-03  2.0000E+00  1.0000E+00  2.8762E-04
+ 
+ px space 1, pt time 2, no weights
+  1.4801E+00  1.9775E-02  1.3534E-03  1.0000E+00  2.0000E+00  2.9799E-03
+ px space 1, pt time 2, Bisquare weights
+  1.4822E+00  1.8311E-02  1.3240E-03  1.0000E+00  2.0000E+00  2.5193E-03
+ px space 1, pt time 2, Huber weights
+  1.4852E+00  1.6255E-02  1.2229E-03  1.0000E+00  2.0000E+00  1.5741E-03
+ px space 1, pt time 2, Bisquare weights
+  1.4873E+00  1.4761E-02  1.1460E-03  1.0000E+00  2.0000E+00  7.6487E-04
+ 
+ px space 2, pt time 2, no weights
+  1.4932E+00  7.0485E-03  1.3475E-03  2.0000E+00  2.0000E+00  2.5254E-03
+ px space 2, pt time 2, weights from hi and ti
+  1.4943E+00  6.5576E-03  1.3216E-03  2.0000E+00  2.0000E+00  2.1613E-03
+ px space 2, pt time 2, Huber weights
+  1.4962E+00  5.6488E-03  1.1976E-03  2.0000E+00  2.0000E+00  9.5664E-04
+ px space 2, pt time 2, Bisquare weights
+  1.4967E+00  5.4268E-03  1.1623E-03  2.0000E+00  2.0000E+00  3.1081E-04
+ 
+ 2 terms space, fit pt time, no weights
+  1.5120E+00 -3.0048E-02  2.3022E-03  1.7633E-02  1.6487E+00  2.8529E-03  4.9925E-01
+ 2 terms space, fit pt time, weights from hi and ti
+  1.5072E+00 -2.0372E-02  1.7590E-03  1.3774E-02  1.8097E+00  2.5879E-03  5.2607E-01
+ 2 terms space, fit pt time, Huber weights
+ Impossible to obtain pt time with 2 terms in space
+ 2 terms space, fit pt time, Bisquare weights
+ Impossible to obtain pt time with 2 terms in space
+ 
+ 2 terms time, fit px space, no weights
+ Impossible to obtain px space with 2 terms in time
+ 2 terms time, fit px space, weights from hi and ti
+ Impossible to obtain px space with 2 terms in time
+ 2 terms time, fit px space, Huber weights
+ Impossible to obtain px space with 2 terms in time
+ 2 terms time, fit px space, Bisquare weights
+ Impossible to obtain px space with 2 terms in time
+ 
+ 2 terms space with pt time 1, no weights
+  1.5089E+00 -3.3795E-02  6.8675E-03  1.9181E-02  1.0000E+00  2.6890E-03  4.7058E-01
+ 2 terms space with pt time 1, weights from hi and ti
+  1.5040E+00 -2.4553E-02  6.6486E-03  1.5511E-02  1.0000E+00  2.5849E-03  4.9448E-01
+ 2 terms space with pt time 1, Huber weights
+  1.5076E+00 -3.0628E-02  6.6950E-03  1.7729E-02  1.0000E+00  2.4847E-03  4.8732E-01
+ 2 terms space with pt time 1, Bisquare weights
+  1.5106E+00 -3.6057E-02  6.7502E-03  1.9997E-02  1.0000E+00  2.5302E-03  4.7290E-01
+ 
+ 2 terms space with pt time 2, no weights
+  1.5124E+00 -2.8424E-02  1.3416E-03  1.6963E-02  2.0000E+00  2.5154E-03  4.4019E-01
+ 2 terms space with pt time 2, weights from hi and ti
+  1.5074E+00 -1.9570E-02  1.3192E-03  1.3440E-02  2.0000E+00  2.2551E-03  4.6102E-01
+ 2 terms space with pt time 2, Huber weights
+  1.5098E+00 -2.2205E-02  1.1951E-03  1.4362E-02  2.0000E+00  1.1521E-03  5.2894E-01
+ 2 terms space with pt time 2, Bisquare weights
+ Impossible to obtain with 2 terms in space and q time 2
+ 
+ 2 terms time with px space 1, no weights
+  1.4797E+00  1.9817E-02  3.1671E-04  1.0000E+00  1.2922E-03  3.3308E-03  5.8289E-01
+ 2 terms time with px space 1, weights from hi and ti
+  1.4824E+00  1.8293E-02 -1.3754E-04  1.0000E+00  1.3509E-03  2.8164E-03  5.9905E-01
+ 2 terms time with px space 1, Huber weights
+  1.4857E+00  1.6234E-02 -6.5060E-04  1.0000E+00  1.3519E-03  1.8697E-03  7.1800E-01
+ 2 terms time with px space 1, Bisquare weights
+  1.4881E+00  1.4655E-02 -7.6949E-04  1.0000E+00  1.2949E-03  8.4282E-04  8.7130E-01
+ 
+ 2 terms time with px space 2, no weights
+  1.4919E+00  7.1073E-03  1.2007E-03  2.0000E+00  1.1154E-03  2.8105E-03  4.9185E-01
+ 2 terms time with px space 2, weights from hi and ti
+  1.4937E+00  6.5834E-03  5.4154E-04  2.0000E+00  1.2157E-03  2.4131E-03  5.0969E-01
+ 2 terms time with px space 2, Huber weights
+  1.4962E+00  5.6477E-03 -3.3514E-05  2.0000E+00  1.2041E-03  1.0720E-03  6.9479E-01
+ 2 terms time with px space 2, Bisquare weights
+  1.4969E+00  5.4139E-03 -1.7602E-04  2.0000E+00  1.1960E-03  3.4516E-04  7.6586E-01
+ 
+ 2 terms space and time, no weights
+  1.5113E+00 -3.0048E-02  2.1250E-03  1.7633E-02  9.3056E-04  2.8529E-03  4.9925E-01
+ 2 terms space and time, weights from hi and ti
+  1.5068E+00 -2.0372E-02  1.0892E-03  1.3774E-02  1.1062E-03  2.5879E-03  5.2607E-01
+ 2 terms space and time, Huber weights
+ Impossible to obtain with 2 terms in space and time
+ 2 terms space and time, Bisquare weights
+ Impossible to obtain with 2 terms in space and time
+ px space 2 and pt time 1
+ Bisquare weights
+ Guess of exact solution                    =  1.4919E+00
+ Error constant in space                    =  5.4932E-03
+ Error constant in time                     =  5.8248E-03
+ Imposed order of grid convergence       px =  2.0
+ Imposed order of time convergence       pt =  1.0
+ Factor of safety                           =  2.67
+ Standard deviation of the fit (no weights) =  4.1220E-03
+ Standard deviation of the fit (weighted)   =  2.8762E-04
+ Ratio between Std/Data                     =  7.2135E-01
+ dx=  0.1000E+01 dt=  0.1000E+01 phi=  0.1503E+01
+ Estimated uncertainty                      =  3.0719E-02
+ Estimated error                            =  1.1318E-02
+ Estimated error noise                      =  5.0942E-04
+
+ dx=  0.1000E+01 dt=  0.2000E+01 phi=  0.1507E+01
+ Estimated uncertainty                      =  4.8092E-02
+ Estimated error                            =  1.7143E-02
+ Estimated error noise                      =  2.3343E-03
+
+ dx=  0.1000E+01 dt=  0.4000E+01 phi=  0.1521E+01
+ Estimated uncertainty                      =  7.7444E-02
+ Estimated error                            =  2.8793E-02
+ Estimated error noise                      =  5.9130E-04
+
+ dx=  0.1422E+01 dt=  0.1000E+01 phi=  0.1509E+01
+ Estimated uncertainty                      =  4.5635E-02
+ Estimated error                            =  1.6925E-02
+ Estimated error noise                      =  4.5848E-04
+
+ dx=  0.1422E+01 dt=  0.2000E+01 phi=  0.1512E+01
+ Estimated uncertainty                      =  6.3666E-02
+ Estimated error                            =  2.2750E-02
+ Estimated error noise                      =  2.9416E-03
+
+ dx=  0.1422E+01 dt=  0.4000E+01 phi=  0.1526E+01
+ Estimated uncertainty                      =  9.2411E-02
+ Estimated error                            =  3.4400E-02
+ Estimated error noise                      =  5.9130E-04
+
+ dx=  0.1871E+01 dt=  0.1000E+01 phi=  0.1517E+01
+ Estimated uncertainty                      =  6.7198E-02
+ Estimated error                            =  2.5051E-02
+ Estimated error noise                      =  3.3290E-04
+
+ dx=  0.1871E+01 dt=  0.4000E+01 phi=  0.1543E+01
+ Estimated uncertainty                      =  1.2237E-01
+ Estimated error                            =  4.2525E-02
+ Estimated error noise                      =  8.8584E-03
+

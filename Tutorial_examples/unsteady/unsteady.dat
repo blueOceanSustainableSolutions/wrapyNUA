@@ -1,0 +1,15 @@
+# Unsteady example
+# First column must contain the grid step size. The name is irrelevant
+# Second column must contain the time step size. The name is irrelevant
+# Columns need to be separated by whitespace (space or tab)
+# Comments can be added leading by a #
+n_i	t_i	\psi_{dev}	# Variable names can be specified in LaTeX syntax
+150000	4	1.543E+00	# Unsteady cases require at least 5 solutions
+#150000	2	1.534E+00	# Solutions can be deactivated by commenting
+150000	1	1.517E+00	
+259800	4	1.526E+00
+259800	2	1.512E+00
+259800	1	1.509E+00
+525000	4	1.521E+00
+525000	2	1.507E+00
+525000	1	1.503E+00
