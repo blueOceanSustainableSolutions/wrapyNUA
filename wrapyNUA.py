@@ -2,7 +2,7 @@
 This is a pre- and postprocessing script for the Python wrapper around the 
 Fortran numerical uncertainty core
 
-Written by mrentschler, last modified 2024-12-02
+Written by mrentschler, last modified 2025-01-14
 """
 
 #%% Settings
@@ -155,8 +155,10 @@ def plotUncertainty_std(path, var, r_i, phi_i, uphi_i, p, alpha, phi_0,
         uphi_i = [uphi_i[uSol - 1]]
         uper_i = [uper_i[uSol - 1]]
     for _r, _phi, _uphi, _uper in zip(r_i, phi_i, uphi_i, uper_i):
-        ax.text(_r, _phi + _uphi, f'{_uper:.1f}%', ha='center', va='bottom')
-    """ Alternative code to plot the percentages alternately above and below the bars
+        ax.text(_r, _phi + _uphi, f'{_uper:.1f}%', ha='center', va='bottom',
+                size=16, rotation=0)
+    """ Possibility to change text size and rotation (in degrees) in line above """
+    """ Alternative code to plot the percentages alternately above and below the bars:
     for _r, _phi, _uphi, _uper, _sign, _va in zip(r_i, phi_i, uphi_i, uper_i, 
         np.resize([1, -1], len(r_i)), np.resize(['bottom', 'top'], len(r_i))):
         ax.text(_r, _phi + _sign * _uphi, f'{_uper:.1f}%', ha='center', va=_va) """
@@ -219,7 +221,7 @@ def plotUncertainty_unstd(path, var, r_i, tau_i, phi_i, uphi_i, fp, iFitType,
     for _r, _tau, _phi, _uphi, _uper in zip(r_i, tau_i, phi_i, uphi_i, uper_i):
         ax.text(_r, _tau, _phi + _uphi, f'{_uper:.1f}%', size=14, 
                 ha='center', va='bottom')
-    """ Alternative code to plot the percentages below the error bars
+    """ Alternative code to plot the percentages below the error bars:
     for _r, _tau, _phi, _uphi, _uper in zip(r_i, tau_i, phi_i, uphi_i, uper_i):
         ax.text(_r, _tau, _phi - _uphi, f'{_uper:.1f}%', size=14, 
                 ha='center', va='top') """
