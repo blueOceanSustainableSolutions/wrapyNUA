@@ -1,6 +1,9 @@
 """
 This is a pre- and postprocessing script for the Python wrapper around the 
-Fortran numerical uncertainty core
+Fortran numerical uncertainty tools available under:
+https://www.marin.nl/en/research/free-resources/verification-and-validation/verification-tools
+
+This is not a standalone script. For dependencies and instructions check the README.
 
 Written by mrentschler, last modified 2025-01-14
 """
@@ -24,7 +27,7 @@ uncertaintySolution = 1
 
 # List of solutions to be ignored. 1-based index, sorted from finest to coarsest solution.
 # Use empty list [] to consider all solutions.
-ignoreSolutions = []
+ignoreSolutions = [5]
 
 # 0: Plots only value of reference solution, 1: Plots all
 showAllUncertainties = 1
